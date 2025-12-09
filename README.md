@@ -1,4 +1,4 @@
-# n8n-nodes-onoffice
+# n8n-nodes-docusign
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -97,7 +97,21 @@ pnpm format
 
 ## 🚧 Roadmap
 
+### Triggers
 
+- Envelope sent or completed
+- Envelope declined or voided
+- Recipient viewed or signed
+- Envelope status changed
+
+### Actions
+
+- Send envelope from template
+- Create & send envelope (custom document or existing PDF)
+- Get envelope status
+- List templates
+- List users or recipients
+- Download completed envelope
 
 ---
 
@@ -107,10 +121,11 @@ pnpm format
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 - [Docusign Website](https://www.docusign.com/)
 - [Docusign API documentation](https://developers.docusign.com/docs/)
+- [Docusign API reference](https://developers.docusign.com/docs/esign-rest-api/reference/)
 - [GitHub Repository](https://github.com/hansdoebel/n8n-nodes-docusign)
 
 ---
 
 ## 📜 Version History
 
-- `0.0.1` – Initial release
+- `0.0.1` – Initial release (Thanks to [JanThiel](https://github.com/JanThiel) for foundational code)

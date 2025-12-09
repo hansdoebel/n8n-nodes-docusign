@@ -1,4 +1,4 @@
-import { ICredentialType, INodeProperties } from "n8n-workflow";
+import { Icon, ICredentialType, INodeProperties } from "n8n-workflow";
 
 export class DocusignOAuth2Api implements ICredentialType {
   name = "docusignOAuth2Api";
@@ -6,8 +6,8 @@ export class DocusignOAuth2Api implements ICredentialType {
     "oAuth2Api",
   ];
   displayName = "Docusign OAuth2 API";
-  documentationUrl = "docusign";
-  icon = "file:docusign.svg";
+  documentationUrl = "https://developers.docusign.com/";
+  icon: Icon = "file:docusign.svg";
   properties: INodeProperties[] = [
     {
       displayName: "Authorization URL",
