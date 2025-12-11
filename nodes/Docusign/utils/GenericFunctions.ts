@@ -10,7 +10,7 @@ import {
   NodeOperationError,
 } from "n8n-workflow";
 
-import { DSAccount, DSMetadataObject } from "./types";
+import { DSAccount, DSMetadataObject } from "@types";
 
 async function getMetadata(
   this:

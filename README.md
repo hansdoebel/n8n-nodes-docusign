@@ -122,6 +122,7 @@ pnpm format
 - [Docusign Website](https://www.docusign.com/)
 - [Docusign API documentation](https://developers.docusign.com/docs/)
 - [Docusign API reference](https://developers.docusign.com/docs/esign-rest-api/reference/)
+- [Zapier Docusign Integrations](https://zapier.com/apps/docusign/integrations)
 - [GitHub Repository](https://github.com/hansdoebel/n8n-nodes-docusign)
 
 ---

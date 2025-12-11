@@ -19,7 +19,13 @@
 		"declaration": true,
 		"sourceMap": true,
 		"skipLibCheck": true,
-		"outDir": "./dist/"
+		"outDir": "./dist/",
+		"baseUrl": ".",
+		"paths": {
+			"@utils/*": ["nodes/Docusign/utils/*"],
+			"@types": ["nodes/Docusign/types"],
+			"@resources/*": ["nodes/Docusign/resources/*"]
+		}
 	},
 	"include": ["credentials/**/*", "nodes/**/*", "nodes/**/*.json", "package.json"]
 }
