@@ -36,7 +36,7 @@ const DocuSignDescription: INodeTypeDescription = {
       type: "options",
       noDataExpression: true,
       default: "templates",
-      options: [{ name: 'Template', value: "templates" }],
+      options: [{ name: "Template", value: "templates" }],
     },
     {
       displayName: "Category",
@@ -68,6 +68,26 @@ const DocuSignDescription: INodeTypeDescription = {
       ],
       default: "get",
     },
+    {
+      displayName: "Use Default Account",
+      name: "useDefaultAccount",
+      type: "boolean",
+      default: true,
+      description: "Whether to use the default DocuSign account",
+    },
+    {
+      displayName: "Account ID",
+      name: "accountId",
+      type: "string",
+      default: "",
+      description:
+        "The DocuSign account ID (used if not using default account)",
+      displayOptions: {
+        show: {
+          useDefaultAccount: [false],
+        },
+      },
+    },
     ...TemplateTemplates.templateGetDescription,
     ...TemplateTemplates.templateCreateDescription,
   ],
@@ -89,12 +109,16 @@ export class Docusign implements INodeType {
 
       try {
         if (resource === "templates") {
-          if (category === "templates" && operation in Templates.templates) {
-            responseData = await (Templates.templates as any)[operation].execute
-              .call(
-                this,
-                i,
-              );
+          if (
+            category === "templates" &&
+            operation in Templates.templates.templates
+          ) {
+            responseData =
+              await (Templates.templates.templates as any)[operation].execute
+                .call(
+                  this,
+                  i,
+                );
           } else {
             throw new NodeOperationError(
               this.getNode(),

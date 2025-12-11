@@ -19,6 +19,13 @@ This is a custom n8n community node providing an integration with Docusign.
 
 ## 📁 Features
 
+### Resources
+
+- Templates:
+  - create
+  
+
+- Envelopes
 
 ---
 
@@ -115,6 +122,18 @@ pnpm format
 
 ---
 
+## 🚧 Development Log
+
+2025-12-12
+- [Placeholder]
+- [Placeholder]
+- [Placeholder]
+
+
+
+
+---
+
 ## 🔗 Resources
 
 - [n8n Website](https://n8n.io/)
@@ -124,6 +143,7 @@ pnpm format
 - [Docusign API reference](https://developers.docusign.com/docs/esign-rest-api/reference/)
 - [Zapier Docusign Integrations](https://zapier.com/apps/docusign/integrations)
 - [GitHub Repository](https://github.com/hansdoebel/n8n-nodes-docusign)
+- [Sample PDF](https://raw.githubusercontent.com/docusign/code-examples-java/master/src/main/resources/World_Wide_Corp_lorem.pdf)
 
 ---
 
