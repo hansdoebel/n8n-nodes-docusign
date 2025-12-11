@@ -31,6 +31,13 @@ export const templateCreateDescription: INodeProperties[] = [
     required: true,
     default: "",
     description: "The name of the template",
+    displayOptions: {
+      show: {
+        resource: ["templates"],
+        category: ["templates"],
+        operation: ["create"],
+      },
+    },
   },
   {
     displayName: "Description",
@@ -38,6 +45,13 @@ export const templateCreateDescription: INodeProperties[] = [
     type: "string",
     default: "",
     description: "The description of the template",
+    displayOptions: {
+      show: {
+        resource: ["templates"],
+        category: ["templates"],
+        operation: ["create"],
+      },
+    },
   },
   {
     displayName: "Document File",
@@ -46,6 +60,13 @@ export const templateCreateDescription: INodeProperties[] = [
     required: true,
     default: "",
     description: "The document file to upload (JSON binary data)",
+    displayOptions: {
+      show: {
+        resource: ["templates"],
+        category: ["templates"],
+        operation: ["create"],
+      },
+    },
   },
   {
     displayName: "Additional Fields",
@@ -53,6 +74,13 @@ export const templateCreateDescription: INodeProperties[] = [
     type: "collection",
     placeholder: "Add field",
     default: {},
+    displayOptions: {
+      show: {
+        resource: ["templates"],
+        category: ["templates"],
+        operation: ["create"],
+      },
+    },
     options: [
       {
         displayName: "Status",

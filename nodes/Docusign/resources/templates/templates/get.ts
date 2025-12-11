@@ -14,6 +14,13 @@ export const templateGetDescription: INodeProperties[] = [
     required: true,
     default: "",
     description: "The ID of the template to retrieve",
+    displayOptions: {
+      show: {
+        resource: ["templates"],
+        category: ["templates"],
+        operation: ["get"],
+      },
+    },
   },
 ];
 
