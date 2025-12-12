@@ -124,10 +124,9 @@ pnpm format
 
 ## 🚧 Development Log
 
-2025-12-12
-- [Placeholder]
-- [Placeholder]
-- [Placeholder]
+Created & Tested successfully:
+- [X] Templates/Templates/Create
+- [X] Templates/Templates/Get
 
 
 
@@ -141,6 +140,7 @@ pnpm format
 - [Docusign Website](https://www.docusign.com/)
 - [Docusign API documentation](https://developers.docusign.com/docs/)
 - [Docusign API reference](https://developers.docusign.com/docs/esign-rest-api/reference/)
+- [Docusign Login](https://account-d.docusign.com/)
 - [Zapier Docusign Integrations](https://zapier.com/apps/docusign/integrations)
 - [GitHub Repository](https://github.com/hansdoebel/n8n-nodes-docusign)
 - [Sample PDF](https://raw.githubusercontent.com/docusign/code-examples-java/master/src/main/resources/World_Wide_Corp_lorem.pdf)

@@ -7,7 +7,6 @@ import type {
 import { NodeOperationError } from "n8n-workflow";
 
 import * as Templates from "./resources/templates";
-
 import * as TemplateTemplates from "./resources/templates/templates";
 
 const DocuSignDescription: INodeTypeDescription = {
@@ -63,8 +62,9 @@ const DocuSignDescription: INodeTypeDescription = {
         },
       },
       options: [
-        { name: "Get", value: "get", action: "Get a templates" },
         { name: "Create", value: "create", action: "Create a templates" },
+        { name: "Get", value: "get", action: "Get a templates" },
+        { name: "List", value: "list", action: "List many templates" },
       ],
       default: "get",
     },
@@ -88,8 +88,9 @@ const DocuSignDescription: INodeTypeDescription = {
         },
       },
     },
-    ...TemplateTemplates.templateGetDescription,
     ...TemplateTemplates.templateCreateDescription,
+    ...TemplateTemplates.templateGetDescription,
+    ...TemplateTemplates.templateListDescription,
   ],
 };
 
