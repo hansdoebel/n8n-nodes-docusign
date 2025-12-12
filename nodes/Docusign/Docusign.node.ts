@@ -6,6 +6,9 @@ import type {
 } from "n8n-workflow";
 import { NodeOperationError } from "n8n-workflow";
 
+import * as Envelopes from "./resources/envelopes";
+import * as EnvelopeEnvelopes from "./resources/envelopes/envelopes";
+
 import * as Templates from "./resources/templates";
 import * as TemplateTemplates from "./resources/templates/templates";
 
@@ -35,16 +38,20 @@ const DocuSignDescription: INodeTypeDescription = {
       type: "options",
       noDataExpression: true,
       default: "templates",
-      options: [{ name: 'Template', value: "templates" }],
+      options: [
+        { name: "Envelopes", value: "envelopes" },
+        { name: "Templates", value: "templates" },
+      ],
     },
     {
       displayName: "Category",
       name: "category",
       type: "options",
       displayOptions: {
-        show: { resource: ["templates"] },
+        show: { resource: ["envelopes", "templates"] },
       },
       options: [
+        { name: "Envelopes", value: "envelopes" },
         { name: "Templates", value: "templates" },
         { name: "Custom Fields", value: "customFields" },
       ],
@@ -62,11 +69,27 @@ const DocuSignDescription: INodeTypeDescription = {
         },
       },
       options: [
-        { name: "Create", value: "create", action: "Create a templates" },
-        { name: "Get", value: "get", action: "Get a templates" },
+        { name: "Create", value: "create", action: "Create a template" },
+        { name: "Get", value: "get", action: "Get a template" },
         { name: "List", value: "list", action: "List many templates" },
       ],
       default: "get",
+    },
+    {
+      displayName: "Operation",
+      name: "operation",
+      type: "options",
+      noDataExpression: true,
+      displayOptions: {
+        show: {
+          resource: ["envelopes"],
+          category: ["envelopes"],
+        },
+      },
+      options: [
+        { name: "Create", value: "create", action: "Create an envelope" },
+      ],
+      default: "create",
     },
     {
       displayName: "Use Default Account",
@@ -88,9 +111,54 @@ const DocuSignDescription: INodeTypeDescription = {
         },
       },
     },
-    ...TemplateTemplates.templateCreateDescription,
-    ...TemplateTemplates.templateGetDescription,
-    ...TemplateTemplates.templateListDescription,
+    ...EnvelopeEnvelopes.envelopeCreateDescription.map((prop) => ({
+      ...prop,
+      displayOptions: {
+        ...prop.displayOptions,
+        show: {
+          ...prop.displayOptions?.show,
+          resource: ["envelopes"],
+          category: ["envelopes"],
+          operation: ["create"],
+        },
+      },
+    })),
+    ...TemplateTemplates.templateCreateDescription.map((prop) => ({
+      ...prop,
+      displayOptions: {
+        ...prop.displayOptions,
+        show: {
+          ...prop.displayOptions?.show,
+          resource: ["templates"],
+          category: ["templates"],
+          operation: ["create"],
+        },
+      },
+    })),
+    ...TemplateTemplates.templateGetDescription.map((prop) => ({
+      ...prop,
+      displayOptions: {
+        ...prop.displayOptions,
+        show: {
+          ...prop.displayOptions?.show,
+          resource: ["templates"],
+          category: ["templates"],
+          operation: ["get"],
+        },
+      },
+    })),
+    ...TemplateTemplates.templateListDescription.map((prop) => ({
+      ...prop,
+      displayOptions: {
+        ...prop.displayOptions,
+        show: {
+          ...prop.displayOptions?.show,
+          resource: ["templates"],
+          category: ["templates"],
+          operation: ["list"],
+        },
+      },
+    })),
   ],
 };
 
@@ -116,6 +184,23 @@ export class Docusign implements INodeType {
           ) {
             responseData =
               await (Templates.templates.templates as any)[operation].execute
+                .call(
+                  this,
+                  i,
+                );
+          } else {
+            throw new NodeOperationError(
+              this.getNode(),
+              `Operation "${operation}" not supported for category "${category}".`,
+            );
+          }
+        } else if (resource === "envelopes") {
+          if (
+            category === "envelopes" &&
+            operation in Envelopes.envelopes.envelopes
+          ) {
+            responseData =
+              await (Envelopes.envelopes.envelopes as any)[operation].execute
                 .call(
                   this,
                   i,
