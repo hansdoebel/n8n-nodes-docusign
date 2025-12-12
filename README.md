@@ -124,10 +124,10 @@ pnpm format
 
 ## 🚧 Development Log
 
-Created & Tested successfully:
+Created & Tested:
 - [X] Templates/Templates/Create
 - [X] Templates/Templates/Get
-
+- [X] Templates/Templates/List
 
 
 

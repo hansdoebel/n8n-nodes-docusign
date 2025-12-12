@@ -35,7 +35,7 @@ const DocuSignDescription: INodeTypeDescription = {
       type: "options",
       noDataExpression: true,
       default: "templates",
-      options: [{ name: "Template", value: "templates" }],
+      options: [{ name: 'Template', value: "templates" }],
     },
     {
       displayName: "Category",

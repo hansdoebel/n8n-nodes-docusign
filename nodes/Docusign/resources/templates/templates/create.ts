@@ -1,3 +1,4 @@
+/* eslint-disable n8n-nodes-base/node-param-default-missing */
 import type {
   IDataObject,
   IExecuteFunctions,
@@ -86,7 +87,6 @@ export const templateCreateDescription: INodeProperties[] = [
     displayName: "Description",
     name: "templateDescription",
     type: "string",
-    required: false,
     default: "",
     description: "The description of the template",
     displayOptions: {
@@ -149,7 +149,6 @@ export const templateCreateDescription: INodeProperties[] = [
     displayName: "Email Subject",
     name: "emailSubject",
     type: "string",
-    required: false,
     default: "",
     description: "The subject line for the email sent when template is used",
     displayOptions: {
@@ -164,12 +163,11 @@ export const templateCreateDescription: INodeProperties[] = [
     displayName: "Email Message",
     name: "emailMessage",
     type: "string",
-    required: false,
-    default: "",
     description: "The email message that will be sent with the template",
     typeOptions: {
       rows: 4,
     },
+    default: "",
     displayOptions: {
       show: {
         resource: ["templates"],
@@ -185,7 +183,6 @@ export const templateCreateDescription: INodeProperties[] = [
     typeOptions: {
       multipleValues: true,
     },
-    required: false,
     default: {},
     placeholder: "Add recipient",
     displayOptions: {
