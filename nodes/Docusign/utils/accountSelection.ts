@@ -73,7 +73,7 @@ export async function selectAccount(
   if (!account) {
     throw new NodeOperationError(
       this.getNode(),
-      `Could not select DocuSign Account to use!`,
+      `Could not select Docusign Account to use!`,
     );
   }
 

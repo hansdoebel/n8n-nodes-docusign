@@ -2,7 +2,7 @@
 
 > **⚠️ Early Development Stage**: This node is currently in very early development. Not all operations have been tested yet. Use with caution in production environments.
 
-DocuSign integration for [n8n](https://n8n.io/) workflow automation platform.
+Docusign integration for [n8n](https://n8n.io/) workflow automation platform.
 
 ## Installation
 
@@ -26,14 +26,14 @@ This node uses OAuth2 for authentication.
 
 ### Setup
 
-1. Create a DocuSign developer account at [developers.docusign.com](https://developers.docusign.com/)
-2. Create an integration in the DocuSign Admin Console
+1. Create a Docusign developer account at [developers.docusign.com](https://developers.docusign.com/)
+2. Create an integration in the Docusign Admin Console
 3. Configure OAuth settings and obtain Client ID and Client Secret
-4. In n8n, create new DocuSign OAuth2 credentials
+4. In n8n, create new Docusign OAuth2 credentials
 5. Enter your Client ID, Client Secret, and account base URI
 6. Complete the OAuth flow
 
-For detailed instructions, see the [DocuSign OAuth documentation](https://developers.docusign.com/platform/auth/oauth/).
+For detailed instructions, see the [Docusign OAuth documentation](https://developers.docusign.com/platform/auth/oauth/).
 
 ## Supported Resources
 

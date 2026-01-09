@@ -199,7 +199,7 @@ export interface PermissionProfile {
 }
 
 export interface PermissionProfileSettings {
-  useNewDocuSignExperienceInterface?: string;
+  useNewDocusignExperienceInterface?: string;
   allowBulkSending?: string;
   allowEnvelopeSending?: string;
   allowSignerAttachments?: string;

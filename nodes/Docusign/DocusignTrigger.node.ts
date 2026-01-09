@@ -8,15 +8,15 @@ import {
 
 export class DocusignTrigger implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "DocuSign Trigger",
+    displayName: "Docusign Trigger",
     name: "docusignTrigger",
     icon: "file:docusign.svg",
     group: ["trigger"],
     version: 1,
     subtitle: '={{$parameter["events"].join(", ")}}',
-    description: "Starts the workflow when DocuSign events occur",
+    description: "Starts the workflow when Docusign events occur",
     defaults: {
-      name: "DocuSign Trigger",
+      name: "Docusign Trigger",
     },
     inputs: [],
     outputs: ["main"],
@@ -77,7 +77,7 @@ export class DocusignTrigger implements INodeType {
             name: "envelope-delivered",
             value: "envelope-delivered",
             description:
-              "This event is sent when all recipients have opened the envelope through the DocuSign signing website. This does not signify an email delivery of an envelope.",
+              "This event is sent when all recipients have opened the envelope through the Docusign signing website. This does not signify an email delivery of an envelope.",
           },
           {
             name: "envelope-discard",
@@ -119,7 +119,7 @@ export class DocusignTrigger implements INodeType {
             name: "recipient-autoresponded",
             value: "recipient-autoresponded",
             description:
-              "Sent when DocuSign gets notification that an email delivery has failed. The delivery failure could be for a number of reasons, such as a bad email address or that the recipient's email system auto-responds to the email from DocuSign.",
+              "Sent when Docusign gets notification that an email delivery has failed. The delivery failure could be for a number of reasons, such as a bad email address or that the recipient's email system auto-responds to the email from Docusign.",
           },
           {
             name: "recipient-completed",
@@ -143,7 +143,7 @@ export class DocusignTrigger implements INodeType {
             name: "recipient-delivered",
             value: "recipient-delivered",
             description:
-              "Sent when the recipient has viewed the document(s) in an envelope through the DocuSign signing web site. This does not signify an email delivery of an envelope.",
+              "Sent when the recipient has viewed the document(s) in an envelope through the Docusign signing web site. This does not signify an email delivery of an envelope.",
           },
           {
             name: "recipient-finish-later",

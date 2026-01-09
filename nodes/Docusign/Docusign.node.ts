@@ -10,15 +10,15 @@ import { allOperations, allResources } from "./resources";
 import { resourceMetadata } from "./config/resourceMetadata";
 import { buildAllOperationProperties } from "@utils/nodeBuilder";
 
-const DocuSignDescription: INodeTypeDescription = {
-  displayName: "DocuSign",
+const DocusignDescription: INodeTypeDescription = {
+  displayName: "Docusign",
   name: "docusign",
   icon: "file:../../icons/docusign.svg",
   group: ["input"],
   version: 1,
   subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
-  description: "Work with the DocuSign API",
-  defaults: { name: "DocuSign" },
+  description: "Work with the Docusign API",
+  defaults: { name: "Docusign" },
   inputs: ["main"],
   outputs: ["main"],
   usableAsTool: true,
@@ -64,7 +64,7 @@ const DocuSignDescription: INodeTypeDescription = {
 };
 
 export class Docusign implements INodeType {
-  description: INodeTypeDescription = DocuSignDescription;
+  description: INodeTypeDescription = DocusignDescription;
 
   async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
     const items = this.getInputData();

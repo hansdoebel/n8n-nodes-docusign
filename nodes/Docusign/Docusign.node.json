@@ -2,20 +2,21 @@
 	"node": "n8n-nodes-base.docusign",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": [
-		"Productivity"
+	"categories": ["Productivity"],
+	"credentialDocumentation": [
+		{
+			"url": "https://www.npmjs.com/package/n8n-nodes-docusign/"
+		}
 	],
-	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": "https://docs.n8n.io/credentials/docusign"
-			}
-		],
-		"primaryDocumentation": [
-			{
-				"url": "https://docs.n8n.io/nodes/n8n-nodes-base.docusign/"
-			}
-		],
-		"generic": []
-	}
+	"primaryDocumentation": [
+		{
+			"url": "https://www.npmjs.com/package/n8n-nodes-docusign/"
+		}
+	],
+	"generic": [
+		{
+			"label": "Docusign – eSignature REST API Reference",
+			"url": "https://developers.docusign.com/docs/esign-rest-api/reference/"
+		}
+	]
 }
