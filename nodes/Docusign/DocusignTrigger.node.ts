@@ -10,7 +10,7 @@ export class DocusignTrigger implements INodeType {
   description: INodeTypeDescription = {
     displayName: "Docusign Trigger",
     name: "docusignTrigger",
-    icon: "file:docusign.svg",
+    icon: "file:../../icons/docusign.svg",
     group: ["trigger"],
     version: 1,
     subtitle: '={{$parameter["events"].join(", ")}}',
