@@ -4,13 +4,13 @@ import type {
   INodeExecutionData,
   INodeProperties,
 } from "n8n-workflow";
-import { docusignApiRequest } from "../../../utils";
+import { docusignApiRequest } from "@utils";
 import {
   DOCUMENT_SOURCE_OPTIONS,
   DocumentSourceType,
   ENVELOPE_STATUS_OPTIONS,
   EnvelopeStatus,
-} from "../../../utils/constants";
+} from "@utils/constants";
 
 export const description: INodeProperties[] = [
   {

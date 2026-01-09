@@ -3,8 +3,8 @@ import type {
   INodeExecutionData,
   INodeProperties,
 } from "n8n-workflow";
-import { docusignApiRequest } from "../../../utils";
-import { API_ENDPOINTS } from "../../../utils/constants";
+import { docusignApiRequest } from "@utils";
+import { API_ENDPOINTS } from "@utils/constants";
 
 export const description: INodeProperties[] = [];
 

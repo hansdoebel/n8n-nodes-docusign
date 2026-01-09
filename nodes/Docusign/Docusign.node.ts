@@ -8,7 +8,7 @@ import { NodeOperationError } from "n8n-workflow";
 
 import { allOperations, allResources } from "./resources";
 import { resourceMetadata } from "./config/resourceMetadata";
-import { buildAllOperationProperties } from "./utils/nodeBuilder";
+import { buildAllOperationProperties } from "@utils/nodeBuilder";
 
 const DocuSignDescription: INodeTypeDescription = {
   displayName: "DocuSign",

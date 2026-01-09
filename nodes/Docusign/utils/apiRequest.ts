@@ -8,7 +8,7 @@ import {
   NodeApiError,
 } from "n8n-workflow";
 
-import { getMetadata, selectAccount } from "./accountSelection";
+import { getMetadata, selectAccount } from "@utils/accountSelection";
 
 export async function docusignApiRequest(
   this: IHookFunctions | IExecuteFunctions | ILoadOptionsFunctions,

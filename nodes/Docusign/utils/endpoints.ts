@@ -1,4 +1,4 @@
-import { API_ENDPOINTS } from "./constants";
+import { API_ENDPOINTS } from "@utils/constants";
 
 export function buildEnvelopeEndpoint(
   envelopeId?: string,
