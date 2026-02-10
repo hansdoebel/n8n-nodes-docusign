@@ -8,41 +8,36 @@ export const operations: INodeProperties[] = [
     noDataExpression: true,
     displayOptions: {
       show: {
-        resource: ["envelopes"],
+        resource: ["envelopeDocuments"],
       },
     },
     options: [
       {
-        name: "Create",
-        value: "create",
-        action: "Create an envelope",
-      },
-      {
         name: "Delete",
         value: "delete",
-        action: "Delete an envelope",
+        action: "Delete documents from an envelope",
       },
       {
         name: "Get",
         value: "get",
-        action: "Get an envelope",
-      },
-      {
-        name: "Get Form Data",
-        value: "getFormData",
-        action: "Get form data from an envelope",
+        action: "Get a document from an envelope",
       },
       {
         name: "List",
         value: "list",
-        action: "List envelopes",
+        action: "List documents in an envelope",
       },
       {
         name: "Update",
         value: "update",
-        action: "Update an envelope",
+        action: "Add or replace a document in an envelope",
+      },
+      {
+        name: "Update List",
+        value: "updateList",
+        action: "Add or replace multiple documents in an envelope",
       },
     ],
-    default: "create",
+    default: "get",
   },
 ];

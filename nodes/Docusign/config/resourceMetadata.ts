@@ -11,6 +11,7 @@ export const resourceMetadata: ResourceMetadata[] = [
   { key: "connect", displayName: "Connect" },
   { key: "customTabs", displayName: "Custom Tab" },
   { key: "diagnostics", displayName: "Diagnostic" },
+  { key: "envelopeDocuments", displayName: "Envelope Document" },
   { key: "envelopes", displayName: "Envelope" },
   { key: "folders", displayName: "Folder" },
   { key: "groups", displayName: "Group" },

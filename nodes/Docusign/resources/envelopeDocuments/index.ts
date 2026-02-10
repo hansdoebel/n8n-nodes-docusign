@@ -1,18 +1,16 @@
-import * as create from "./operations/create";
 import * as del from "./operations/delete";
 import * as get from "./operations/get";
-import * as getFormData from "./operations/getFormData";
 import * as list from "./operations/list";
 import * as update from "./operations/update";
+import * as updateList from "./operations/updateList";
 import { operations } from "./operationsDescription";
 
 export { operations };
 
-export const envelopes = {
-  create,
+export const envelopeDocuments = {
   delete: del,
   get,
-  getFormData,
   list,
   update,
+  updateList,
 };

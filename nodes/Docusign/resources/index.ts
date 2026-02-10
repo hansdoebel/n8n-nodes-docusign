@@ -5,6 +5,10 @@ export { cloudStorage, operations as cloudStorageOps } from "./cloudStorage";
 export { connect, operations as connectOps } from "./connect";
 export { customTabs, operations as customTabsOps } from "./customTabs";
 export { diagnostics, operations as diagnosticsOps } from "./diagnostics";
+export {
+  envelopeDocuments,
+  operations as envelopeDocumentsOps,
+} from "./envelopeDocuments";
 export { envelopes, operations as envelopesOps } from "./envelopes";
 export { folders, operations as foldersOps } from "./folders";
 export { groups, operations as groupsOps } from "./groups";
@@ -28,6 +32,7 @@ import * as cloudStorageModule from "./cloudStorage";
 import * as connectModule from "./connect";
 import * as customTabsModule from "./customTabs";
 import * as diagnosticsModule from "./diagnostics";
+import * as envelopeDocumentsModule from "./envelopeDocuments";
 import * as envelopesModule from "./envelopes";
 import * as foldersModule from "./folders";
 import * as groupsModule from "./groups";
@@ -49,6 +54,7 @@ export const allResources = {
   connect: connectModule.connect,
   customTabs: customTabsModule.customTabs,
   diagnostics: diagnosticsModule.diagnostics,
+  envelopeDocuments: envelopeDocumentsModule.envelopeDocuments,
   envelopes: envelopesModule.envelopes,
   folders: foldersModule.folders,
   groups: groupsModule.groups,
@@ -71,6 +77,7 @@ export const allOperations = [
   connectModule.operations,
   customTabsModule.operations,
   diagnosticsModule.operations,
+  envelopeDocumentsModule.operations,
   envelopesModule.operations,
   foldersModule.operations,
   groupsModule.operations,
